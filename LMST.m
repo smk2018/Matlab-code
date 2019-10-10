@@ -1,7 +1,7 @@
 clear all;
     for i = 1:5
-      x_target(i) = 5+randn(1);%randi(3)*randi(3);%randsrc(1)*randi(3);
-      y_target(i) = 5+randn(1);%randi(3)*randi(3);%randsrc(1)*randi(3);
+      x_target(i) = 5+rand(1);%randi(3)*randi(3);%randsrc(1)*randi(3);
+      y_target(i) = 5+rand(1);%randi(3)*randi(3);%randsrc(1)*randi(3);
       x = rand(1)
       y = rand(1)
       X(i) = x;
@@ -258,69 +258,70 @@ for e = 1:15
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,1))));
                    row1(i) = Row1(1);
                      if(row1(i)>10)
-                        p_x1(i) = X(2) + 1*cosd(theta3(row1(i)-10,1));
-                        p_y1(i) = Y(2) + 1*sind(theta3(row1(i)-10,1));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(2) + 1*cosd(theta3(row1(i)-10,1));
+                        p_y1(i,e) = Y(2) + 1*sind(theta3(row1(i)-10,1));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      else
-                        p_x1(i) = X(1) + 1*cosd(theta2(row1(i),1));
-                        p_y1(i) = Y(1) + 1*sind(theta2(row1(i),1));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(1) + 1*cosd(theta2(row1(i),1));
+                        p_y1(i,e) = Y(1) + 1*sind(theta2(row1(i),1));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      end
                  
                   elseif(m_1(i,e) == 3)
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,2))));
                    row1(i) = Row1(1);
                      if(row1(i)>10)
-                        p_x1(i) = X(3) + 1*cosd(theta3(row1(i)-10,2));
-                        p_y1(i) = Y(3) + 1*sind(theta3(row1(i)-10,2));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(3) + 1*cosd(theta3(row1(i)-10,2));
+                        p_y1(i,e) = Y(3) + 1*sind(theta3(row1(i)-10,2));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      else
-                        p_x1(i) = X(1) + 1*cosd(theta2(row1(i),2));
-                        p_y1(i) = Y(1) + 1*sind(theta2(row1(i),2));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(1) + 1*cosd(theta2(row1(i),2));
+                        p_y1(i,e) = Y(1) + 1*sind(theta2(row1(i),2));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      end
                  
                   elseif(m_1(i,e) == 4)
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,3))));
                    row1(i) = Row1(1);
                      if(row1(i)>10)
-                        p_x1(i) = X(4) + 1*cosd(theta3(row1(i)-10,3));
-                        p_y1(i) = Y(4) + 1*sind(theta3(row1(i)-10,3));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(4) + 1*cosd(theta3(row1(i)-10,3));
+                        p_y1(i,e) = Y(4) + 1*sind(theta3(row1(i)-10,3));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      else
-                        p_x1(i) = X(1) + 1*cosd(theta2(row1(i),3));
-                        p_y1(i) = Y(1) + 1*sind(theta2(row1(i),3));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(1) + 1*cosd(theta2(row1(i),3));
+                        p_y1(i,e) = Y(1) + 1*sind(theta2(row1(i),3));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      end
                  
                   elseif(m_1(i,e) == 5)
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,4))));
                    row1(i) = Row1(1);
                      if(row1(i)>10)
-                        p_x1(i) = X(5) + 1*cosd(theta3(row1(i)-10,4));
-                        p_y1(i) = Y(5) + 1*sind(theta3(row1(i)-10,4));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(5) + 1*cosd(theta3(row1(i)-10,4));
+                        p_y1(i,e) = Y(5) + 1*sind(theta3(row1(i)-10,4));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      else
-                        p_x1(i) = X(1) + 1*cosd(theta2(row1(i),4));
-                        p_y1(i) = Y(1) + 1*sind(theta2(row1(i),4));
-                        distance1(i) = sqrt((p_x1(i)-x_target(1))^2+(p_y1(i)-y_target(1))^2);
+                        p_x1(i,e) = X(1) + 1*cosd(theta2(row1(i),4));
+                        p_y1(i,e) = Y(1) + 1*sind(theta2(row1(i),4));
+                        distance1(i) = sqrt((p_x1(i,e)-x_target(1))^2+(p_y1(i,e)-y_target(1))^2);
                      end
                   end
               end
              [w1] = find(distance1==min(distance1));
-             p_x(1,e) = p_x1(w1(1));
-             p_y(1,e) = p_y1(w1(1));
+             p_x(1,e) = max(p_x1(w1,e));
+             p_y(1,e) = max(p_y1(w1,e));
+             w1 = 0;distance1 = 0;
         else
                   if(m_1(1,e) == 2)
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,1))));
                    row1 = Row1(1);
                      if(row1>10)
-                        p_x1 = X(2) + 1*cosd(theta3(row1-10,1));
-                        p_y1 = Y(2) + 1*sind(theta3(row1-10,1));
+                        p_x11(e) = X(2) + 1*cosd(theta3(row1-10,1));
+                        p_y11(e) = Y(2) + 1*sind(theta3(row1-10,1));
                         
                      else
-                        p_x1 = X(1) + 1*cosd(theta2(row1,1));
-                        p_y1 = Y(1) + 1*sind(theta2(row1,1));
+                        p_x11(e) = X(1) + 1*cosd(theta2(row1,1));
+                        p_y11(e) = Y(1) + 1*sind(theta2(row1,1));
                         
                      end
                  
@@ -328,12 +329,12 @@ for e = 1:15
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,2))));
                    row1 = Row1(1);
                      if(row1>10)
-                        p_x1 = X(3) + 1*cosd(theta3(row1-10,2));
-                        p_y1 = Y(3) + 1*sind(theta3(row1-10,2));
+                        p_x11(e) = X(3) + 1*cosd(theta3(row1-10,2));
+                        p_y11(e) = Y(3) + 1*sind(theta3(row1-10,2));
                         
                      else
-                        p_x1 = X(1) + 1*cosd(theta2(row1,2));
-                        p_y1 = Y(1) + 1*sind(theta2(row1,2));
+                        p_x11(e) = X(1) + 1*cosd(theta2(row1,2));
+                        p_y11(e) = Y(1) + 1*sind(theta2(row1,2));
                         
                      end
                  
@@ -341,12 +342,12 @@ for e = 1:15
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,3))));
                    row1 = Row1(1);
                      if(row1>10)
-                        p_x1 = X(4) + 1*cosd(theta3(row1-10,3));
-                        p_y1 = Y(4) + 1*sind(theta3(row1-10,3));
+                        p_x11(e) = X(4) + 1*cosd(theta3(row1-10,3));
+                        p_y11(e) = Y(4) + 1*sind(theta3(row1-10,3));
                         
                      else
-                        p_x1 = X(1) + 1*cosd(theta2(row1,3));
-                        p_y1 = Y(1) + 1*sind(theta2(row1,3));
+                        p_x11(e) = X(1) + 1*cosd(theta2(row1,3));
+                        p_y11(e) = Y(1) + 1*sind(theta2(row1,3));
                         
                      end
                   
@@ -354,17 +355,17 @@ for e = 1:15
                    [Row1 Column1] = find(Distance1==min(min(Distance1(:,4))));
                    row1 = Row1(1);
                      if(row1>10)
-                        p_x1 = X(5) + 1*cosd(theta3(row1-10,4));
-                        p_y1 = Y(5) + 1*sind(theta3(row1-10,4));
+                        p_x11(e) = X(5) + 1*cosd(theta3(row1-10,4));
+                        p_y11(e) = Y(5) + 1*sind(theta3(row1-10,4));
                         
                      else
-                        p_x1 = X(1) + 1*cosd(theta2(row1,4));
-                        p_y1 = Y(1) + 1*sind(theta2(row1,4));
+                        p_x11(e) = X(1) + 1*cosd(theta2(row1,4));
+                        p_y11(e) = Y(1) + 1*sind(theta2(row1,4));
                         
                      end
                   end
-             p_x(1,e) = p_x1(1);
-             p_y(1,e) = p_y1(1);
+             p_x(1,e) = max(p_x11(e));
+             p_y(1,e) = max(p_y11(e));
          end
              
 %round short-term position to target2
@@ -374,70 +375,70 @@ for e = 1:15
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,5))));
                    row2(i) = Row2(1);
                      if(row2(i)>10)
-                        p_x2(i) = X(3) + 1*cosd(theta3(row2(i)-10,5));
-                        p_y2(i) = Y(3) + 1*sind(theta3(row2(i)-10,5));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(3) + 1*cosd(theta3(row2(i)-10,5));
+                        p_y2(i,e) = Y(3) + 1*sind(theta3(row2(i)-10,5));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      else
-                        p_x2(i) = X(2) + 1*cosd(theta2(row2(i),5));
-                        p_y2(i) = Y(2) + 1*sind(theta2(row2(i),5));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(2) + 1*cosd(theta2(row2(i),5));
+                        p_y2(i,e) = Y(2) + 1*sind(theta2(row2(i),5));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      end
                   
                   elseif(m_2(i,e) == 4)
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,6))));
                    row2(i) = Row2(1);
                      if(row2(i)>10)
-                        p_x2(i) = X(4) + 1*cosd(theta3(row2(i)-10,6));
-                        p_y2(i) = Y(4) + 1*sind(theta3(row2(i)-10,6));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(4) + 1*cosd(theta3(row2(i)-10,6));
+                        p_y2(i,e) = Y(4) + 1*sind(theta3(row2(i)-10,6));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      else
-                        p_x2(i) = X(2) + 1*cosd(theta2(row2(i),6));
-                        p_y2(i) = Y(2) + 1*sind(theta2(row2(i),6));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(2) + 1*cosd(theta2(row2(i),6));
+                        p_y2(i,e) = Y(2) + 1*sind(theta2(row2(i),6));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      end
                   
                   elseif(m_2(i,e) == 5)
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,7))));
                    row2(i) = Row2(1);
                     if(row2(i)>10)
-                        p_x2(i) = X(5) + 1*cosd(theta3(row2(i)-10,7));
-                        p_y2(i) = Y(5) + 1*sind(theta3(row2(i)-10,7));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(5) + 1*cosd(theta3(row2(i)-10,7));
+                        p_y2(i,e) = Y(5) + 1*sind(theta3(row2(i)-10,7));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      else
-                        p_x2(i) = X(2) + 1*cosd(theta2(row2(i),7));
-                        p_y2(i) = Y(2) + 1*sind(theta2(row2(i),7));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(2) + 1*cosd(theta2(row2(i),7));
+                        p_y2(i,e) = Y(2) + 1*sind(theta2(row2(i),7));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      end
                   
                   elseif(n_2(i,e) == 1)
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,1))));
                    row2(i) = Row2(1);
                      if(row2(i)>10)
-                        p_x2(i) = X(2) + 1*cosd(theta3(row2(i)-10,1));
-                        p_y2(i) = Y(2) + 1*sind(theta3(row2(i)-10,1));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(2) + 1*cosd(theta3(row2(i)-10,1));
+                        p_y2(i,e) = Y(2) + 1*sind(theta3(row2(i)-10,1));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      else
-                        p_x2(i) = X(1) + 1*cosd(theta2(row2(i),1));
-                        p_y2(i) = Y(1) + 1*sind(theta2(row2(i),1));
-                        distance2(i) = sqrt((p_x2(i)-x_target(2))^2+(p_y2(i)-y_target(2))^2);
+                        p_x2(i,e) = X(1) + 1*cosd(theta2(row2(i),1));
+                        p_y2(i,e) = Y(1) + 1*sind(theta2(row2(i),1));
+                        distance2(i) = sqrt((p_x2(i,e)-x_target(2))^2+(p_y2(i,e)-y_target(2))^2);
                      end
                   end
               end
              [w2] = find(distance2==min(distance2));
-             p_x(2,e) = p_x2(w2(1));
-             p_y(2,e) = p_y2(w2(1));
-              
+             p_x(2,e) = max(p_x2(w2,e));
+             p_y(2,e) = max(p_y2(w2,e));
+             w2 = 0;distance2 = 0;
            else
                   if(m_2(1,e) == 3)
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,5))));
                    row2 = Row2(1);
                      if(row2>10)
-                        p_x2 = X(3) + 1*cosd(theta3(row2-10,5));
-                        p_y2 = Y(3) + 1*sind(theta3(row2-10,5));
+                        p_x21(e) = X(3) + 1*cosd(theta3(row2-10,5));
+                        p_y21(e) = Y(3) + 1*sind(theta3(row2-10,5));
                         
                      else
-                        p_x2 = X(2) + 1*cosd(theta2(row2,5));
-                        p_y2 = Y(2) + 1*sind(theta2(row2,5));
+                        p_x21(e) = X(2) + 1*cosd(theta2(row2,5));
+                        p_y21(e) = Y(2) + 1*sind(theta2(row2,5));
                         
                      end
                  
@@ -445,12 +446,12 @@ for e = 1:15
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,6))));
                    row2 = Row2(1);
                      if(row2>10)
-                        p_x2 = X(4) + 1*cosd(theta3(row2-10,6));
-                        p_y2 = Y(4) + 1*sind(theta3(row2-10,6));
+                        p_x21(e) = X(4) + 1*cosd(theta3(row2-10,6));
+                        p_y21(e) = Y(4) + 1*sind(theta3(row2-10,6));
                         
                      else
-                        p_x2 = X(2) + 1*cosd(theta2(row2,6));
-                        p_y2 = Y(2) + 1*sind(theta2(row2,6));
+                        p_x21(e) = X(2) + 1*cosd(theta2(row2,6));
+                        p_y21(e) = Y(2) + 1*sind(theta2(row2,6));
                         
                      end
                   
@@ -458,12 +459,12 @@ for e = 1:15
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,7))));
                    row2 = Row2(1);
                     if(row2>10)
-                        p_x2 = X(5) + 1*cosd(theta3(row2-10,7));
-                        p_y2 = Y(5) + 1*sind(theta3(row2-10,7));
+                        p_x21(e) = X(5) + 1*cosd(theta3(row2-10,7));
+                        p_y21(e) = Y(5) + 1*sind(theta3(row2-10,7));
                        
                      else
-                        p_x2 = X(2) + 1*cosd(theta2(row2,7));
-                        p_y2 = Y(2) + 1*sind(theta2(row2,7));
+                        p_x21(e) = X(2) + 1*cosd(theta2(row2,7));
+                        p_y21(e) = Y(2) + 1*sind(theta2(row2,7));
                         
                      end
                   
@@ -471,17 +472,17 @@ for e = 1:15
                    [Row2 Column2] = find(Distance2==min(min(Distance2(:,1))));
                    row2 = Row2(1);
                      if(row2>10)
-                        p_x2 = X(2) + 1*cosd(theta3(row2-10,1));
-                        p_y2 = Y(2) + 1*sind(theta3(row2-10,1));
+                        p_x21(e) = X(2) + 1*cosd(theta3(row2-10,1));
+                        p_y21(e) = Y(2) + 1*sind(theta3(row2-10,1));
                         
                      else
-                        p_x2 = X(1) + 1*cosd(theta2(row2,1));
-                        p_y2 = Y(1) + 1*sind(theta2(row2,1));
+                        p_x21(e) = X(1) + 1*cosd(theta2(row2,1));
+                        p_y21(e) = Y(1) + 1*sind(theta2(row2,1));
                         
                      end
                   end
-             p_x(2,e) = p_x2(1);
-             p_y(2,e) = p_y2(1);
+             p_x(2,e) = max(p_x21(e));
+             p_y(2,e) = max(p_y21(e));
            end
 
 %round short-term position to target3  
@@ -491,69 +492,70 @@ for e = 1:15
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,2))));
                    row3(i) = Row3(1);
                      if(row3(i)>10)
-                        p_x3(i) = X(3) + 1*cosd(theta3(row3(i)-10,2));
-                        p_y3(i) = Y(3) + 1*sind(theta3(row3(i)-10,2));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(3) + 1*cosd(theta3(row3(i)-10,2));
+                        p_y3(i,e) = Y(3) + 1*sind(theta3(row3(i)-10,2));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      else
-                        p_x3(i) = X(1) + 1*cosd(theta2(row3(i),2));
-                        p_y3(i) = Y(1) + 1*sind(theta2(row3(i),2));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(1) + 1*cosd(theta2(row3(i),2));
+                        p_y3(i,e) = Y(1) + 1*sind(theta2(row3(i),2));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      end
                   
                   elseif(n_3(i,e) == 2)
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,5))));
                    row3(i) = Row3(1);
                      if(row3(i)>10)
-                        p_x3(i) = X(3) + 1*cosd(theta3(row3(i)-10,5));
-                        p_y3(i) = Y(3) + 1*sind(theta3(row3(i)-10,5));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(3) + 1*cosd(theta3(row3(i)-10,5));
+                        p_y3(i,e) = Y(3) + 1*sind(theta3(row3(i)-10,5));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      else
-                        p_x3(i) = X(2) + 1*cosd(theta2(row3(i),5));
-                        p_y3(i) = Y(2) + 1*sind(theta2(row3(i),5));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(2) + 1*cosd(theta2(row3(i),5));
+                        p_y3(i,e) = Y(2) + 1*sind(theta2(row3(i),5));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      end
                 
                   elseif(m_3(i,e) == 4)
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,8))));
                    row3(i) = Row3(1);
                      if(row3(i)>10)
-                        p_x3(i) = X(4) + 1*cosd(theta3(row3(i)-10,8));
-                        p_y3(i) = Y(4) + 1*sind(theta3(row3(i)-10,8));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(4) + 1*cosd(theta3(row3(i)-10,8));
+                        p_y3(i,e) = Y(4) + 1*sind(theta3(row3(i)-10,8));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      else
-                        p_x3(i) = X(3) + 1*cosd(theta2(row3(i),8));
-                        p_y3(i) = Y(3) + 1*sind(theta2(row3(i),8));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(3) + 1*cosd(theta2(row3(i),8));
+                        p_y3(i,e) = Y(3) + 1*sind(theta2(row3(i),8));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      end
                  
                   elseif(m_3(i,e) == 5)
                    [Row3 Column3] = find(Distance3==min(Distance3(:,9)));
                    row3(i) = Row3(1);
                      if(row3(i)>10)
-                        p_x3(i) = X(5) + 1*cosd(theta3(row3(i)-10,9));
-                        p_y3(i) = Y(5) + 1*sind(theta3(row3(i)-10,9));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(5) + 1*cosd(theta3(row3(i)-10,9));
+                        p_y3(i,e) = Y(5) + 1*sind(theta3(row3(i)-10,9));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      else
-                        p_x3(i) = X(3) + 1*cosd(theta2(row3(i),9));
-                        p_y3(i) = Y(3) + 1*sind(theta2(row3(i),9));
-                        distance3(i) = sqrt((p_x3(i)-x_target(3))^2+(p_y3(i)-y_target(3))^2);
+                        p_x3(i,e) = X(3) + 1*cosd(theta2(row3(i),9));
+                        p_y3(i,e) = Y(3) + 1*sind(theta2(row3(i),9));
+                        distance3(i) = sqrt((p_x3(i,e)-x_target(3))^2+(p_y3(i,e)-y_target(3))^2);
                      end
                   end
               end
              [w3] = find(distance3==min(distance3));
-             p_x(3,e) = p_x3(w3(1));
-             p_y(3,e) = p_y3(w3(1));
+             p_x(3,e) = max(p_x3(w3,e));
+             p_y(3,e) = max(p_y3(w3,e));
+             w3 = 0;distance3 = 0;
          else
                  if(n_3(1,e) == 1)
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,2))));
                    row3 = Row3(1);
                      if(row3>10)
-                        p_x3 = X(3) + 1*cosd(theta3(row3-10,2));
-                        p_y3 = Y(3) + 1*sind(theta3(row3-10,2));
+                        p_x31(e) = X(3) + 1*cosd(theta3(row3-10,2));
+                        p_y31(e) = Y(3) + 1*sind(theta3(row3-10,2));
                         
                      else
-                        p_x3 = X(1) + 1*cosd(theta2(row3,2));
-                        p_y3 = Y(1) + 1*sind(theta2(row3,2));
+                        p_x31(e) = X(1) + 1*cosd(theta2(row3,2));
+                        p_y31(e) = Y(1) + 1*sind(theta2(row3,2));
                        
                      end
                  
@@ -561,12 +563,12 @@ for e = 1:15
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,5))));
                    row3 = Row3(1);
                      if(row3>10)
-                        p_x3 = X(3) + 1*cosd(theta3(row3-10,5));
-                        p_y3 = Y(3) + 1*sind(theta3(row3-10,5));
+                        p_x31(e) = X(3) + 1*cosd(theta3(row3-10,5));
+                        p_y31(e) = Y(3) + 1*sind(theta3(row3-10,5));
                         
                      else
-                        p_x3 = X(2) + 1*cosd(theta2(row3,5));
-                        p_y3 = Y(2) + 1*sind(theta2(row3,5));
+                        p_x31(e) = X(2) + 1*cosd(theta2(row3,5));
+                        p_y31(e) = Y(2) + 1*sind(theta2(row3,5));
                         
                      end
                   
@@ -574,12 +576,12 @@ for e = 1:15
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,8))));
                    row3 = Row3(1);
                      if(row3>10)
-                        p_x3 = X(4) + 1*cosd(theta3(row3-10,8));
-                        p_y3 = Y(4) + 1*sind(theta3(row3-10,8));
-                        
+                        p_x31(e) = X(4) + 1*cosd(theta3(row3-10,8));
+                        p_y31(e) = Y(4) + 1*sind(theta3(row3-10,8));
+                       
                      else
-                        p_x3 = X(3) + 1*cosd(theta2(row3,8));
-                        p_y3 = Y(3) + 1*sind(theta2(row3,8));
+                        p_x31(e) = X(3) + 1*cosd(theta2(row3,8));
+                        p_y31(e) = Y(3) + 1*sind(theta2(row3,8));
                         
                      end
                   
@@ -587,17 +589,17 @@ for e = 1:15
                    [Row3 Column3] = find(Distance3==min(min(Distance3(:,9))));
                    row3 = Row3(1);
                      if(row3>10)
-                        p_x3 = X(5) + 1*cosd(theta3(row3-10,9));
-                        p_y3 = Y(5) + 1*sind(theta3(row3-10,9));
+                        p_x31(e) = X(5) + 1*cosd(theta3(row3-10,9));
+                        p_y31(e) = Y(5) + 1*sind(theta3(row3-10,9));
                         
                      else
-                        p_x3 = X(3) + 1*cosd(theta2(row3(1),9));
-                        p_y3 = Y(3) + 1*sind(theta2(row3(1),9));
+                        p_x31(e) = X(3) + 1*cosd(theta2(row3(1),9));
+                        p_y31(e) = Y(3) + 1*sind(theta2(row3(1),9));
                         
                      end
                  end
-             p_x(3,e) = p_x3(1);
-             p_y(3,e) = p_y3(1);
+             p_x(3,e) = max(p_x31(e));
+             p_y(3,e) = max(p_y31(e));
           end
              
              
@@ -609,69 +611,70 @@ for e = 1:15
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,3))));
                    row4(i) = Row4(1);
                     if(row4(i)>10)
-                        p_x4(i) = X(4) + 1*cosd(theta3(row4(i)-10,3));
-                        p_y4(i) = Y(4) + 1*sind(theta3(row4(i)-10,3));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(4) + 1*cosd(theta3(row4(i)-10,3));
+                        p_y4(i,e) = Y(4) + 1*sind(theta3(row4(i)-10,3));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      else
-                        p_x4(i) = X(1) + 1*cosd(theta2(row4(i),3));
-                        p_y4(i) = Y(1) + 1*sind(theta2(row4(i),3));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(1) + 1*cosd(theta2(row4(i),3));
+                        p_y4(i,e) = Y(1) + 1*sind(theta2(row4(i),3));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      end
                   
                   elseif(n_4(i,e) == 2)
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,6))));
                    row4(i) = Row4(1);
                      if(row4(i)>10)
-                        p_x4(i) = X(4) + 1*cosd(theta3(row4(i)-10,6));
-                        p_y4(i) = Y(4) + 1*sind(theta3(row4(i)-10,6));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(4) + 1*cosd(theta3(row4(i)-10,6));
+                        p_y4(i,e) = Y(4) + 1*sind(theta3(row4(i)-10,6));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      else
-                        p_x4(i) = X(2) + 1*cosd(theta2(row4(i),6));
-                        p_y4(i) = Y(2) + 1*sind(theta2(row4(i),6));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(2) + 1*cosd(theta2(row4(i),6));
+                        p_y4(i,e) = Y(2) + 1*sind(theta2(row4(i),6));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      end
                   
                   elseif(n_4(i,e) == 3)
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,8))));
                    row4(i) = Row4(1);
                      if(row4(i)>10)
-                        p_x4(i) = X(4) + 1*cosd(theta3(row4(i)-10,8));
-                        p_y4(i) = Y(4) + 1*sind(theta3(row4(i)-10,8));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(4) + 1*cosd(theta3(row4(i)-10,8));
+                        p_y4(i,e) = Y(4) + 1*sind(theta3(row4(i)-10,8));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      else
-                        p_x4(i) = X(3) + 1*cosd(theta2(row4(i),8));
-                        p_y4(i) = Y(3) + 1*sind(theta2(row4(i),8));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(3) + 1*cosd(theta2(row4(i),8));
+                        p_y4(i,e) = Y(3) + 1*sind(theta2(row4(i),8));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      end
                   
                   elseif(m_4(i,e) == 5)
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,10))));
                    row4(i) = Row4(1);
                      if(row4(i)>10)
-                        p_x4(i) = X(5) + 1*cosd(theta3(row4(i)-10,10));
-                        p_y4(i) = Y(5) + 1*sind(theta3(row4(i)-10,10));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(5) + 1*cosd(theta3(row4(i)-10,10));
+                        p_y4(i,e) = Y(5) + 1*sind(theta3(row4(i)-10,10));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      else
-                        p_x4(i) = X(4) + 1*cosd(theta2(row4(i),10));
-                        p_y4(i) = Y(4) + 1*sind(theta2(row4(i),10));
-                        distance4(i) = sqrt((p_x4(i)-x_target(4))^2+(p_y4(i)-y_target(4))^2);
+                        p_x4(i,e) = X(4) + 1*cosd(theta2(row4(i),10));
+                        p_y4(i,e) = Y(4) + 1*sind(theta2(row4(i),10));
+                        distance4(i) = sqrt((p_x4(i,e)-x_target(4))^2+(p_y4(i,e)-y_target(4))^2);
                      end
                   end
               end
              [w4] = find(distance4==min(distance4));
-             p_x(4,e) = p_x4(w4(1));
-             p_y(4,e) = p_y4(w4(1));
+             p_x(4,e) = max(p_x4(w4,e));
+             p_y(4,e) = max(p_y4(w4,e));
+             w4 = 0;distance4 = 0;
         else
                   if(n_4(1,e) == 1)
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,3))));
                    row4 = Row4(1);
                     if(row4>10)
-                        p_x4 = X(4) + 1*cosd(theta3(row4-10,3));
-                        p_y4 = Y(4) + 1*sind(theta3(row4-10,3));
+                        p_x41(e) = X(4) + 1*cosd(theta3(row4-10,3));
+                        p_y41(e) = Y(4) + 1*sind(theta3(row4-10,3));
                         
                      else
-                        p_x4 = X(1) + 1*cosd(theta2(row4,3));
-                        p_y4 = Y(1) + 1*sind(theta2(row4,3));
+                        p_x41(e) = X(1) + 1*cosd(theta2(row4,3));
+                        p_y41(e) = Y(1) + 1*sind(theta2(row4,3));
                         
                      end
                  
@@ -679,12 +682,12 @@ for e = 1:15
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,6))));
                    row4 = Row4(1);
                      if(row4>10)
-                        p_x4 = X(4) + 1*cosd(theta3(row4-10,6));
-                        p_y4 = Y(4) + 1*sind(theta3(row4-10,6));
+                        p_x41(e) = X(4) + 1*cosd(theta3(row4-10,6));
+                        p_y41(e) = Y(4) + 1*sind(theta3(row4-10,6));
                         
                      else
-                        p_x4 = X(2) + 1*cosd(theta2(row4,6));
-                        p_y4 = Y(2) + 1*sind(theta2(row4,6));
+                        p_x41(e) = X(2) + 1*cosd(theta2(row4,6));
+                        p_y41(e) = Y(2) + 1*sind(theta2(row4,6));
                         
                      end
                   
@@ -692,12 +695,12 @@ for e = 1:15
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,8))));
                    row4 = Row4(1);
                      if(row4>10)
-                        p_x4 = X(4) + 1*cosd(theta3(row4-10,8));
-                        p_y4 = Y(4) + 1*sind(theta3(row4-10,8));
+                        p_x41(e) = X(4) + 1*cosd(theta3(row4-10,8));
+                        p_y41(e) = Y(4) + 1*sind(theta3(row4-10,8));
                         
                      else
-                        p_x4 = X(3) + 1*cosd(theta2(row4,8));
-                        p_y4 = Y(3) + 1*sind(theta2(row4,8));
+                        p_x41(e) = X(3) + 1*cosd(theta2(row4,8));
+                        p_y41(e) = Y(3) + 1*sind(theta2(row4,8));
                         
                      end
                   
@@ -705,17 +708,17 @@ for e = 1:15
                    [Row4 Column4] = find(Distance4==min(min(Distance4(:,10))));
                    row4 = Row4(1);
                      if(row4>10)
-                        p_x4 = X(5) + 1*cosd(theta3(row4-10,10));
-                        p_y4 = Y(5) + 1*sind(theta3(row4-10,10));
+                        p_x41(e) = X(5) + 1*cosd(theta3(row4-10,10));
+                        p_y41(e) = Y(5) + 1*sind(theta3(row4-10,10));
                         
                      else
-                        p_x4 = X(4) + 1*cosd(theta2(row4,10));
-                        p_y4 = Y(4) + 1*sind(theta2(row4,10));
+                        p_x41(e) = X(4) + 1*cosd(theta2(row4,10));
+                        p_y41(e) = Y(4) + 1*sind(theta2(row4,10));
                         
                      end
                   end
-             p_x(4,e) = p_x4(1);
-             p_y(4,e) = p_y4(1);
+             p_x(4,e) = max(p_x41(e));
+             p_y(4,e) = max(p_y41(e));
           end
               
 %round short-term position to target5   
@@ -725,13 +728,13 @@ for e = 1:15
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,4))));
                     row5(i) = Row5(1);
                      if(row5(i)>10)
-                        p_x5(i) = X(5) + 1*cosd(theta3(row5(i)-10,4));
-                        p_y5(i) = Y(5) + 1*sind(theta3(row5(i)-10,4));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(5) + 1*cosd(theta3(row5(i)-10,4));
+                        p_y5(i,e) = Y(5) + 1*sind(theta3(row5(i)-10,4));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      else
-                        p_x5(i) = X(1) + 1*cosd(theta2(row5(i),4));
-                        p_y5(i) = Y(1) + 1*sind(theta2(row5(i),4));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(1) + 1*cosd(theta2(row5(i),4));
+                        p_y5(i,e) = Y(1) + 1*sind(theta2(row5(i),4));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      end
                  
                   elseif(n_5(i,e) == 2)
@@ -739,56 +742,57 @@ for e = 1:15
                     row5(i) = Row5(1);
                     column5(i) = max(Column5);
                      if(row5(i)>10)
-                        p_x5(i) = X(5) + 1*cosd(theta3(row5(i)-10,7));
-                        p_y5(i) = Y(5) + 1*sind(theta3(row5(i)-10,7));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(5) + 1*cosd(theta3(row5(i)-10,7));
+                        p_y5(i,e) = Y(5) + 1*sind(theta3(row5(i)-10,7));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      else
-                        p_x5(i) = X(2) + 1*cosd(theta2(row5(i),7));
-                        p_y5(i) = Y(2) + 1*sind(theta2(row5(i),7));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(2) + 1*cosd(theta2(row5(i),7));
+                        p_y5(i,e) = Y(2) + 1*sind(theta2(row5(i),7));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      end
                   
                   elseif(n_5(i,e) == 3)
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,9))));
                     row5(i) = Row5(1);
                      if(row5(i)>10)
-                        p_x5(i) = X(5) + 1*cosd(theta3(row5(i)-10,9));
-                        p_y5(i) = Y(5) + 1*sind(theta3(row5(i)-10,9));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(5) + 1*cosd(theta3(row5(i)-10,9));
+                        p_y5(i,e) = Y(5) + 1*sind(theta3(row5(i)-10,9));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      else
-                        p_x5(i) = X(3) + 1*cosd(theta2(row5(i),9));
-                        p_y5(i) = Y(3) + 1*sind(theta2(row5(i),9));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(3) + 1*cosd(theta2(row5(i),9));
+                        p_y5(i,e) = Y(3) + 1*sind(theta2(row5(i),9));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      end
                   
                   elseif(n_5(i,e) == 4)
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,10))));
                     row5(i) = Row5(1);
                      if(row5(i)>10)
-                        p_x5(i) = X(5) + 1*cosd(theta3(row5(i)-10,10));
-                        p_y5(i) = Y(5) + 1*sind(theta3(row5(i)-10,10));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(5) + 1*cosd(theta3(row5(i)-10,10));
+                        p_y5(i,e) = Y(5) + 1*sind(theta3(row5(i)-10,10));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      else
-                        p_x5(i) = X(4) + 1*cosd(theta2(row5(i),10));
-                        p_y5(i) = Y(4) + 1*sind(theta2(row5(i),10));
-                        distance5(i) = sqrt((p_x5(i)-x_target(5))^2+(p_y5(i)-y_target(5))^2);
+                        p_x5(i,e) = X(4) + 1*cosd(theta2(row5(i),10));
+                        p_y5(i,e) = Y(4) + 1*sind(theta2(row5(i),10));
+                        distance5(i) = sqrt((p_x5(i,e)-x_target(5))^2+(p_y5(i,e)-y_target(5))^2);
                      end
                   end
               end
              [w5] = find(distance5==min(distance5));
-             p_x(5,e) = p_x5(w5(1));
-             p_y(5,e) = p_y5(w5(1));
+             p_x(5,e) = max(p_x5(w5,e));
+             p_y(5,e) = max(p_y5(w5,e));
+             w5 = 0;distance5 = 0;
            else
                   if(n_5(1,e) == 1)
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,4))));
                     row5 = Row5(1);
                      if(row5>10)
-                        p_x5 = X(5) + 1*cosd(theta3(row5-10,4));
-                        p_y5 = Y(5) + 1*sind(theta3(row5-10,4));
+                        p_x51(e) = X(5) + 1*cosd(theta3(row5-10,4));
+                        p_y51(e) = Y(5) + 1*sind(theta3(row5-10,4));
                         
                      else
-                        p_x5 = X(1) + 1*cosd(theta2(row5,4));
-                        p_y5 = Y(1) + 1*sind(theta2(row5,4));
+                        p_x51(e) = X(1) + 1*cosd(theta2(row5,4));
+                        p_y51(e) = Y(1) + 1*sind(theta2(row5,4));
                         
                      end
                   
@@ -796,12 +800,12 @@ for e = 1:15
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,7))));
                     row5 = Row5(1);
                      if(row5>10)
-                        p_x5 = X(5) + 1*cosd(theta3(row5-10,7));
-                        p_y5 = Y(5) + 1*sind(theta3(row5-10,7));
+                        p_x51(e) = X(5) + 1*cosd(theta3(row5-10,7));
+                        p_y51(e) = Y(5) + 1*sind(theta3(row5-10,7));
                         
                      else
-                        p_x5 = X(2) + 1*cosd(theta2(row5,7));
-                        p_y5 = Y(2) + 1*sind(theta2(row5,7));
+                        p_x51(e) = X(2) + 1*cosd(theta2(row5,7));
+                        p_y51(e) = Y(2) + 1*sind(theta2(row5,7));
                         
                      end
                   
@@ -809,12 +813,12 @@ for e = 1:15
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,9))));
                     row5 = Row5(1);
                      if(row5>10)
-                        p_x5 = X(5) + 1*cosd(theta3(row5-10,9));
-                        p_y5 = Y(5) + 1*sind(theta3(row5-10,9));
+                        p_x51(e) = X(5) + 1*cosd(theta3(row5-10,9));
+                        p_y51(e) = Y(5) + 1*sind(theta3(row5-10,9));
                         
                      else
-                        p_x5 = X(3) + 1*cosd(theta2(row5,9));
-                        p_y5 = Y(3) + 1*sind(theta2(row5,9));
+                        p_x51(e) = X(3) + 1*cosd(theta2(row5,9));
+                        p_y51(e) = Y(3) + 1*sind(theta2(row5,9));
                         
                      end
 
@@ -822,17 +826,17 @@ for e = 1:15
                     [Row5 Column5] = find(Distance5==min(min(Distance5(:,10))));
                     row5 = Row5(1);
                      if(row5>10)
-                        p_x5 = X(5) + 1*cosd(theta3(row5-10,10));
-                        p_y5 = Y(5) + 1*sind(theta3(row5-10,10));
+                        p_x51(e) = X(5) + 1*cosd(theta3(row5-10,10));
+                        p_y51(e) = Y(5) + 1*sind(theta3(row5-10,10));
                         
                      else
-                        p_x5 = X(4) + 1*cosd(theta2(row5,10));
-                        p_y5 = Y(4) + 1*sind(theta2(row5,10));
+                        p_x51(e) = X(4) + 1*cosd(theta2(row5,10));
+                        p_y51(e) = Y(4) + 1*sind(theta2(row5,10));
                   
                      end
                   end
-             p_x(5,e) = p_x5(1);
-             p_y(5,e) = p_y5(1);
+             p_x(5,e) = max(p_x51(e));
+             p_y(5,e) = max(p_y51(e));
            end
               
               for i = 1:5
@@ -857,7 +861,7 @@ for e = 1:15
               end
      
      K = 1;
-     
+    
     frame = getframe(gcf); 
     writeVideo(writerObj, frame);
     hold off
